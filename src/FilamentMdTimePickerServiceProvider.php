@@ -2,24 +2,29 @@
 
 namespace ArtMin96\FilamentMdTimePicker;
 
+use Filament\Support\Assets\AlpineComponent;
+use Filament\Support\Assets\Css;
+use Filament\Support\Assets\Js;
+use Filament\Support\Facades\FilamentAsset;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ArtMin96\FilamentMdTimePicker\Commands\FilamentMdTimePickerCommand;
 
 class FilamentMdTimePickerServiceProvider extends PackageServiceProvider
 {
+    public static string $name = 'filament-md-time-picker';
+
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package
-            ->name('filament-md-time-picker')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_filament-md-time-picker_table')
-            ->hasCommand(FilamentMdTimePickerCommand::class);
+            ->name(static::$name)
+            ->hasViews();
+    }
+
+    public function packageBooted(): void
+    {
+        FilamentAsset::register([
+            Css::make('filament-md-time-picker', __DIR__ . '/../resources/dist/filament-md-time-picker.css')->loadedOnRequest(),
+            AlpineComponent::make('filament-md-time-picker', __DIR__ . '/../resources/dist/filament-md-time-picker.js')->loadedOnRequest(),
+        ], 'artmin96/filament-md-time-picker');
     }
 }
