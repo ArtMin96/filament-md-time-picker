@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ArtMin96\FilamentMdTimePicker\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentMdTimePickerCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-md-time-picker';
 
     public $description = 'My command';
 
