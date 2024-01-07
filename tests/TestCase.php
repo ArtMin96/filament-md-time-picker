@@ -2,9 +2,9 @@
 
 namespace ArtMin96\FilamentMdTimePicker\Tests;
 
+use ArtMin96\FilamentMdTimePicker\FilamentMdTimePickerServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use ArtMin96\FilamentMdTimePicker\FilamentMdTimePickerServiceProvider;
 
 class TestCase extends Orchestra
 {

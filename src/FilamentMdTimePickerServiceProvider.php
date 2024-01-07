@@ -2,9 +2,9 @@
 
 namespace ArtMin96\FilamentMdTimePicker;
 
+use ArtMin96\FilamentMdTimePicker\Commands\FilamentMdTimePickerCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use ArtMin96\FilamentMdTimePicker\Commands\FilamentMdTimePickerCommand;
 
 class FilamentMdTimePickerServiceProvider extends PackageServiceProvider
 {
