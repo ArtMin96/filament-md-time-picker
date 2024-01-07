@@ -23,8 +23,8 @@ class FilamentMdTimePickerServiceProvider extends PackageServiceProvider
     public function packageBooted(): void
     {
         FilamentAsset::register([
-            Css::make('filament-md-time-picker', __DIR__ . '/../resources/dist/filament-md-time-picker.css')->loadedOnRequest(),
-            AlpineComponent::make('filament-md-time-picker', __DIR__ . '/../resources/dist/filament-md-time-picker.js')->loadedOnRequest(),
+            Css::make('filament-md-time-picker-style', __DIR__ . '/../resources/dist/filament-md-time-picker.css'),
+            AlpineComponent::make('filament-md-time-picker', __DIR__ . '/../resources/dist/filament-md-time-picker.js'),
         ], 'artmin96/filament-md-time-picker');
     }
 }

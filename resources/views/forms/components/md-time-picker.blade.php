@@ -30,6 +30,7 @@
                    ax-load
                @endif
                ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('filament-md-time-picker', 'artmin96/filament-md-time-picker') }}"
+               x-load-css="[@js(\Filament\Support\Facades\FilamentAsset::getStyleHref('filament-md-time-picker-style', package: 'artmin96/filament-md-time-picker'))]"
                x-data="mdTimePicker({
                    statePath: '{!! $getStatePath() !!}',
                    ref: $refs.timePicker,
